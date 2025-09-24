@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   isMenuOpen = false;
+  activeSection = 'inicio';
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
@@ -14,5 +15,14 @@ export class HeaderComponent {
 
   closeMenu() {
     this.isMenuOpen = false;
+  }
+
+  setActiveSection(section: string) {
+    this.activeSection = section;
+    this.closeMenu();
+  }
+
+  isActive(section: string): boolean {
+    return this.activeSection === section;
   }
 }
