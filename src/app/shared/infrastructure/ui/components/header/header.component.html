@@ -1,0 +1,70 @@
+<header class="header">
+  <div class="header-container">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="assets/images/logoSoftF.png" alt="Soft Focus" />
+    </div>
+
+    <nav class="nav-desktop">
+      <a href="#inicio"
+         class="nav-link"
+         [class.active]="isActive('inicio')"
+         (click)="setActiveSection('inicio')">
+        Inicio
+      </a>
+      <a href="#funcionalidades"
+         class="nav-link"
+         [class.active]="isActive('funcionalidades')"
+         (click)="setActiveSection('funcionalidades')">
+        Funcionalidades
+      </a>
+      <a href="#planes"
+         class="nav-link"
+         [class.active]="isActive('planes')"
+         (click)="setActiveSection('planes')">
+        Planes
+      </a>
+      <a href="#nosotros"
+         class="nav-link"
+         [class.active]="isActive('nosotros')"
+         (click)="setActiveSection('nosotros')">
+        Nosotros
+      </a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button class="menu-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Mobile Navigation -->
+    <nav class="nav-mobile" [class.active]="isMenuOpen">
+      <a href="#inicio"
+         class="nav-link"
+         [class.active]="isActive('inicio')"
+         (click)="setActiveSection('inicio')">
+        Inicio
+      </a>
+      <a href="#funcionalidades"
+         class="nav-link"
+         [class.active]="isActive('funcionalidades')"
+         (click)="setActiveSection('funcionalidades')">
+        Funcionalidades
+      </a>
+      <a href="#planes"
+         class="nav-link"
+         [class.active]="isActive('planes')"
+         (click)="setActiveSection('planes')">
+        Planes
+      </a>
+      <a href="#nosotros"
+         class="nav-link"
+         [class.active]="isActive('nosotros')"
+         (click)="setActiveSection('nosotros')">
+        Sobre nosotros
+      </a>
+    </nav>
+  </div>
+</header>

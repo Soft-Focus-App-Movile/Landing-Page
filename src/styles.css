@@ -1,1 +1,118 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+--color-primary: #E5EAE3;
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+
+
+--color-secondary-light: #E8EDE6;
+  --color-secondary-medium: #6B9080;
+  --color-secondary-dark: #497654;
+  --color-secondary-darkest: #122D18;
+
+
+--color-background: var(--color-white);
+  --color-surface: var(--color-primary);
+  --color-text-primary: var(--color-black);
+  --color-text-secondary: var(--color-secondary-darkest);
+  --color-text-muted: var(--color-secondary-dark);
+
+
+--color-button-primary: var(--color-secondary-medium);
+  --color-button-primary-hover: var(--color-secondary-dark);
+  --color-link: var(--color-secondary-medium);
+  --color-link-hover: var(--color-secondary-dark);
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #2A332D;
+    --color-background: #1A1A1A;
+    --color-surface: #2A2A2A;
+    --color-text-primary: #F5F5F5;
+    --color-text-secondary: #E8EDE6;
+    --color-text-muted: #6B9080;
+    --color-black: #ffff;
+    --color-button-primary: #7FA595;
+    --color-button-primary-hover: #5B8070;
+    --color-link: #7FA595;
+    --color-link-hover: #5B8070;
+  }
+}
+
+
+
+:root {
+--font-header: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-titles: 'Crimson Text', Georgia, serif;
+  --font-body: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-cards: 'Sorts Mill Goudy', Georgia, serif;
+
+--font-weight-regular: 400;
+  --font-weight-semibold: 600;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html {
+  scroll-behavior: auto; /* Desactivamos el smooth nativo */
+}
+
+/* Scrollbar moderno y bonito */
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #497654, #6B9080);
+  border-radius: 20px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #6B9080, #497654);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+  transform: scaleY(1.1);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Para Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #497654 transparent;
+}
+
+/* Dark mode scrollbar */
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #497654, #7FA595);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #7FA595, #497654);
+  }
+
+  html {
+    scrollbar-color: #497654 transparent;
+  }
+}

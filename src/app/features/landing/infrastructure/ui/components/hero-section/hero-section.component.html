@@ -1,0 +1,75 @@
+<section class="hero-section" id="inicio">
+
+  <div class="hero-top-section">
+    <div class="hero-container">
+      <!-- Content Side -->
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            {{ heroContent.title }}
+          </h1>
+
+          <p class="hero-description">
+            {{ heroContent.description }}
+          </p>
+
+          <div class="hero-actions">
+            <button class="cta-button" (click)="onGetStarted()">
+              {{ heroContent.ctaText }}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panda Image Side -->
+      <div class="hero-panda">
+        <div class="panda-container">
+          <img
+            src="assets/images/panda.svg"
+            alt="SoftFocus Panda Mascot"
+            class="panda-image">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Section - White Background -->
+  <div class="hero-bottom-section">
+    <div class="hero-container">
+      <!-- Phone Image (crossing from green to white) -->
+      <div class="phone-section">
+        <img
+          src="assets/images/calendar.svg"
+          alt="SoftFocus App Preview"
+          class="phone-image">
+      </div>
+
+      <!-- Store Buttons -->
+      <div class="store-buttons-section">
+        <div class="store-buttons">
+          <a
+            href="{{ heroContent.appStoreUrl }}"
+            target="_blank"
+            class="store-button-link"
+            aria-label="Descargar en App Store">
+            <img
+              src="assets/images/app-store-badge.svg"
+              alt="Descargar en App Store"
+              class="store-badge">
+          </a>
+
+          <a
+            href="{{ heroContent.playStoreUrl }}"
+            target="_blank"
+            class="store-button-link"
+            aria-label="Obtener en Google Play">
+            <img
+              src="assets/images/google-play-badge.svg"
+              alt="Disponible en Google Play"
+              class="store-badge">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
