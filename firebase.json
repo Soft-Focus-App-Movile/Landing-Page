@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/LandingPageSoftFocus",
+    "public": "dist/LandingPageSoftFocus/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
