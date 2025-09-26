@@ -15,15 +15,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 110px;
+  height: clamp(80px, 15vw, 110px); /* Altura responsive */
 }
 
 .logo {
-  padding-left: 3rem;
+  padding-left: clamp(1rem, 5vw, 3rem); /* Padding responsive */
 }
 
 .logo img {
-  height: 115px;
+  height: clamp(60px, 12vw, 115px); /* Logo responsive */
   width: auto;
 }
 
@@ -40,17 +40,16 @@
   text-decoration: none;
   font-family: var(--font-header);
   font-weight: var(--font-weight-regular);
-  font-size: 1.5rem;
-  padding: 0 clamp(2rem, 4vw, 5rem);
-  height: 110px;
+  font-size: clamp(1rem, 2.5vw, 1.3rem); /* Texto más pequeño */
+  padding: 0 clamp(1.5rem, 3vw, 4rem); /* Padding más pequeño */
+  height: clamp(80px, 15vw, 110px); /* Altura igual al container */
   display: flex;
   align-items: center;
   justify-content: center;
   flex: 1;
-  min-width: clamp(80px, 10vw, 140px);
+  min-width: clamp(70px, 8vw, 120px); /* Min-width más pequeño */
   transition: all 0.3s ease;
 }
-
 
 .nav-link:hover {
   background-color: var(--color-primary);
@@ -62,7 +61,6 @@
   color: var(--color-text-primary);
 }
 
-
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -71,6 +69,7 @@
   cursor: pointer;
   padding: 0.5rem;
   gap: 4px;
+  margin-right: clamp(1rem, 5vw, 3rem); /* Margen responsive */
 }
 
 .menu-toggle span {
@@ -91,7 +90,6 @@
 .menu-toggle.active span:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
 }
-
 
 .nav-mobile {
   display: none;
@@ -120,6 +118,8 @@
   padding: 0.75rem 1rem;
   border-bottom: 1px solid var(--color-primary);
   border-radius: 8px;
+  height: auto; /* Override height for mobile */
+  font-size: 1.1rem; /* Tamaño fijo para móvil */
 }
 
 .nav-mobile .nav-link:last-child {
@@ -138,5 +138,13 @@
 
   .nav-mobile {
     display: flex;
+  }
+
+  .header-container {
+    height: 80px; /* Altura fija más pequeña en móvil */
+  }
+
+  .logo img {
+    height: 60px; /* Logo más pequeño en móvil */
   }
 }

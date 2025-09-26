@@ -20,6 +20,15 @@ export class HeaderComponent {
   setActiveSection(section: string) {
     this.activeSection = section;
     this.closeMenu();
+
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'nearest'
+      });
+    }
   }
 
   isActive(section: string): boolean {
