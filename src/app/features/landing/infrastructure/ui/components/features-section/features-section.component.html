@@ -1,0 +1,81 @@
+<section class="features-section" id="funcionalidades">
+  <div class="container">
+    <!-- Título principal -->
+    <h2 class="section-title">Todo lo que necesitas para tu bienestar emocional</h2>
+
+    <!-- SECCIÓN: Para Ti (Usuarios) -->
+    <div class="user-type-section">
+      <h3 class="user-type-title">Para Ti</h3>
+      <div class="features-grid">
+        <!-- Repetir por cada funcionalidad de usuarios -->
+        <div
+          *ngFor="let feature of getUserFeatures()"
+          class="feature-card"
+          [class.expanded]="isExpanded(feature.id)"
+          (click)="toggleFeature(feature.id)"
+        >
+          <div class="feature-card-inner">
+
+            <!-- VISTA FRONTAL (compacta) -->
+            <div class="feature-front">
+              <div class="feature-icon">
+                <img [src]="feature.icon" [alt]="feature.title + ' icon'" />
+              </div>
+              <h4 class="feature-title">{{ feature.title }}</h4>
+            </div>
+
+            <!-- VISTA TRASERA (expandida) -->
+            <div class="feature-back">
+              <button class="close-btn" (click)="toggleFeature(feature.id); $event.stopPropagation()">×</button>
+              <p class="feature-description">{{ feature.description }}</p>
+
+              <!-- Screenshot único -->
+              <div class="screenshot-container">
+                <img [src]="feature.screenshots" [alt]="feature.title + ' screenshot'" />
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECCIÓN: Para Psicólogos -->
+    <div class="user-type-section">
+      <h3 class="user-type-title">Para Psicólogos</h3>
+      <div class="features-grid">
+        <!-- Repetir por cada funcionalidad de psicólogos -->
+        <div
+          *ngFor="let feature of getPsychologistFeatures()"
+          class="feature-card"
+          [class.expanded]="isExpanded(feature.id)"
+          (click)="toggleFeature(feature.id)"
+        >
+          <div class="feature-card-inner">
+
+            <!-- VISTA FRONTAL (compacta) -->
+            <div class="feature-front">
+              <div class="feature-icon">
+                <img [src]="feature.icon" [alt]="feature.title + ' icon'" />
+              </div>
+              <h4 class="feature-title">{{ feature.title }}</h4>
+            </div>
+
+            <!-- VISTA TRASERA (expandida) - SIN TÍTULO -->
+            <div class="feature-back">
+              <button class="close-btn" (click)="toggleFeature(feature.id); $event.stopPropagation()">×</button>
+              <p class="feature-description">{{ feature.description }}</p>
+
+              <!-- Screenshot único -->
+              <div class="screenshot-container">
+                <img [src]="feature.screenshots" [alt]="feature.title + ' screenshot'" />
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
