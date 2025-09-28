@@ -29,7 +29,7 @@ export class FeaturesSectionComponent {
       icon: 'assets/images/1fi.svg',
       category: 'user',
       screenshots: 'assets/images/1fs.svg',
-      description: 'Registra tus emociones y pensamientos diariamente'
+      description: 'Check-ins emocionales '
     },
     {
       id: 'emotional-ai',
@@ -37,7 +37,7 @@ export class FeaturesSectionComponent {
       icon: 'assets/images/2fi.svg',
       category: 'user',
       screenshots: 'assets/images/2fs.svg',
-      description: 'Asistente inteligente para apoyo emocional'
+      description: 'Apoyo cuando más lo necesitas '
     },
     {
       id: 'immediate-resources',
@@ -45,7 +45,7 @@ export class FeaturesSectionComponent {
       icon: 'assets/images/3fi.svg',
       category: 'user',
       screenshots: 'assets/images/3fs.svg',
-      description: 'Acceso rápido a herramientas de bienestar'
+      description: 'Chat inteligente que te entiende '
     },
     {
       id: 'professional-dashboard',
@@ -53,7 +53,7 @@ export class FeaturesSectionComponent {
       icon: 'assets/images/4fi.svg',
       category: 'psychologist',
       screenshots: 'assets/images/4fs.svg',
-      description: 'Panel completo para gestionar pacientes'
+      description: 'Monitoreo en tiempo real'
     },
     {
       id: 'direct-chat',
@@ -61,7 +61,7 @@ export class FeaturesSectionComponent {
       icon: 'assets/images/5fi.svg',
       category: 'psychologist',
       screenshots: 'assets/images/5fs.svg',
-      description: 'Comunicación segura con pacientes'
+      description: ' Alertas inmediatas '
     },
     {
       id: 'crisis-button',
@@ -69,7 +69,7 @@ export class FeaturesSectionComponent {
       icon: 'assets/images/6fi.svg',
       category: 'psychologist',
       screenshots: 'assets/images/6fs.svg',
-      description: 'Sistema de alerta para situaciones críticas'
+      description: 'Comunicación segura'
     }
   ];
 
