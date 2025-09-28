@@ -75,7 +75,6 @@
   backface-visibility: hidden;
   border-radius: 16px;
   border: 2px solid var(--color-secondary-dark);
-
   transition: all 0.3s ease;
   overflow: visible;
 }
@@ -104,10 +103,6 @@
   position: relative;
   color: #000000;
 }
-.feature-back .feature-description {
-  color: #000000;
-}
-
 
 .feature-icon {
   width: 80px;
@@ -183,18 +178,16 @@
 .feature-description {
   font-family: var(--font-body);
   color: var(--color-text-muted);
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
   text-align: center;
 }
 
 .screenshot-container {
   flex: 1;
   position: relative;
-
   overflow: visible;
-
   /* Añadir margen inferior para dar espacio al overflow */
   margin-bottom: -30px;
 }
@@ -208,23 +201,11 @@
   position: absolute;
   top: -5%;
   left: -5%;
-
   z-index: 5;
 }
 
-/* Alternativa más dramática - descomentar si quieres más overflow */
-/*
-.screenshot-container img {
-  width: 120%;
-  height: 120%;
-  top: 5%;
-  left: -10%;
-}
-*/
-
 .screenshot-container:hover img {
   transform: scale(1.05);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes fadeInUp {
@@ -245,6 +226,13 @@
 .feature-card:nth-child(1) { animation-delay: 0.1s; }
 .feature-card:nth-child(2) { animation-delay: 0.2s; }
 .feature-card:nth-child(3) { animation-delay: 0.3s; }
+
+/* MODO CLARO - Descripción negra */
+@media (prefers-color-scheme: light) {
+  .feature-description {
+    color: var(--color-text-muted);
+  }
+}
 
 @media (max-width: 768px) {
   .features-section {
@@ -337,6 +325,7 @@
   }
 }
 
+/* MODO OSCURO */
 @media (prefers-color-scheme: dark) {
   .features-section {
     background-color: #2A332D;
@@ -345,6 +334,19 @@
   .feature-front,
   .feature-back {
     border-color: #7FA595;
+  }
+
+  .user-type-title {
+    color: #ffffff;
+  }
+
+  .close-btn {
+    color: #ffffff;
+  }
+
+  /* Descripción blanca en modo oscuro */
+  .feature-description {
+    color: #ffffff;
   }
 
   .feature-card:hover .feature-front {
@@ -366,4 +368,3 @@
     box-shadow: 0 12px 35px rgba(255, 255, 255, 0);
   }
 }
-
