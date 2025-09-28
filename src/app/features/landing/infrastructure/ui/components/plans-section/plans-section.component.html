@@ -1,0 +1,99 @@
+<section class="app-plans-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Planes</h2>
+      <p class="section-subtitle">Elige el plan que mejor se adapte a tus necesidades</p>
+    </div>
+
+
+
+    <div class="plans-grid">
+      <!-- Planes Gratuitos -->
+      <div class="plan-card" *ngIf="selectedPlanType === 'gratuito'">
+        <div class="plan-header usuario">
+          <h3 class="plan-type">USUARIO</h3>
+          <h4 class="plan-name">Plan Gratuito</h4>
+        </div>
+        <div class="plan-body">
+          <ul class="plan-features">
+            <li>Check-in básico diarios</li>
+            <li>Acceso limitado a recursos especializados</li>
+            <li>Recordatorios simples</li>
+            <li>Comunidad de apoyo</li>
+          </ul>
+          <button class="plan-btn" (click)="onPlanButtonClick('gratuito', 'usuario')">
+            Plan pro
+            <span class="arrow">→</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="plan-card" *ngIf="selectedPlanType === 'gratuito'">
+        <div class="plan-header psicologo">
+          <h3 class="plan-type">PSICÓLOGO</h3>
+          <h4 class="plan-name">Plan Gratuito</h4>
+        </div>
+        <div class="plan-body">
+          <ul class="plan-features">
+            <li>Perfil profesional básico</li>
+            <li>Hasta 3 pacientes vinculados</li>
+            <li>Acceso a recursos limitado</li>
+            <li>Visibilidad en la plataforma</li>
+          </ul>
+          <button class="plan-btn" (click)="onPlanButtonClick('gratuito', 'psicologo')">
+            Plan pro
+            <span class="arrow">→</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Planes Premium -->
+      <div class="plan-card premium" *ngIf="selectedPlanType === 'premium'">
+        <div class="plan-header usuario">
+          <h3 class="plan-type">USUARIO</h3>
+          <h4 class="plan-name">Plan Pro</h4>
+          <div class="plan-price">
+            <span class="price">$12.99</span>
+            <span class="period">/mes</span>
+          </div>
+        </div>
+        <div class="plan-body">
+          <ul class="plan-features">
+            <li>Check-in ilimitados</li>
+            <li>IA conversacional avanzada</li>
+            <li>Herramientas especializadas</li>
+            <li>Acceso completo a biblioteca de recursos</li>
+            <li>Notificaciones y recordatorios avanzados</li>
+          </ul>
+          <button class="plan-btn premium" (click)="onPlanButtonClick('premium', 'usuario')">
+            Plan gratis
+            <span class="arrow">→</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="plan-card premium" *ngIf="selectedPlanType === 'premium'">
+        <div class="plan-header psicologo">
+          <h3 class="plan-type">PSICÓLOGO</h3>
+          <h4 class="plan-name">Plan Pro</h4>
+          <div class="plan-price">
+            <span class="price">$39.99</span>
+            <span class="period">/mes</span>
+          </div>
+        </div>
+        <div class="plan-body">
+          <ul class="plan-features">
+            <li>Dashboard profesional</li>
+            <li>Monitoreo en tiempo real de pacientes</li>
+            <li>Acceso a métricas avanzadas</li>
+            <li>Vinculación ilimitada con pacientes</li>
+          </ul>
+          <button class="plan-btn premium" (click)="onPlanButtonClick('premium', 'psicologo')">
+            Plan gratis
+            <span class="arrow">→</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

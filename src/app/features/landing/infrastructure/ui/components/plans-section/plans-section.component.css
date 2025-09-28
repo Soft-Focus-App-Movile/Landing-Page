@@ -1,0 +1,333 @@
+.app-plans-section {
+  padding: 80px 0;
+  background: var(--color-background);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-family: var(--font-titles);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Grid de planes */
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.plan-card {
+  background: var(--color-white);
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+}
+
+.plan-card.premium {
+  border: 2px solid var(--color-secondary-medium);
+}
+
+.plan-card.premium::before {
+  content: "Más Popular";
+  position: absolute;
+  top: -1px;
+  right: 20px;
+  background: linear-gradient(135deg, var(--color-secondary-medium), var(--color-secondary-dark));
+  color: var(--color-white);
+  padding: 8px 20px;
+  border-radius: 0 0 12px 12px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.5px;
+  z-index: 3;
+}
+
+/* Headers de planes - Ahora ocupa toda la parte superior */
+.plan-header {
+  padding: 40px 30px 50px;
+  color: var(--color-white);
+  text-align: center;
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 25px 25px 0 0;
+}
+
+.plan-header.usuario {
+  background: linear-gradient(135deg, #2d5016 0%, #1a2f0b 100%);
+}
+
+.plan-header.psicologo {
+  background: linear-gradient(135deg, #6b9080 0%, #4a6741 100%);
+}
+
+.plan-header.premium {
+  background: linear-gradient(135deg, #2d5016 0%, #1a2f0b 100%);
+}
+
+.plan-type {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+  opacity: 0.9;
+  text-transform: uppercase;
+}
+
+.plan-name {
+  font-family: var(--font-titles);
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  line-height: 1.2;
+}
+
+.plan-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 20px;
+}
+
+.price {
+  font-family: var(--font-titles);
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.period {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+/* Cuerpo de planes - Parte blanca inferior */
+.plan-body {
+  padding: 25px 30px 30px;
+  background: var(--color-white);
+  flex-shrink: 0;
+  border-radius: 0 0 25px 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+}
+
+.plan-features li {
+  padding: 8px 0;
+  position: relative;
+  padding-left: 25px;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-regular);
+  font-size: 0.95rem;
+}
+
+.plan-features li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  color: var(--color-secondary-medium);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Botón en esquina inferior derecha */
+.plan-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: auto;
+  padding: 10px 18px;
+  background: var(--color-secondary-medium);
+  color: var(--color-white);
+  border: none;
+  border-radius: 20px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-transform: capitalize;
+  box-shadow: 0 2px 8px rgba(107, 144, 128, 0.3);
+}
+
+.plan-btn:hover {
+  background: var(--color-secondary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(107, 144, 128, 0.4);
+}
+
+.plan-btn.premium {
+  background: var(--color-secondary-dark);
+}
+
+.plan-btn.premium:hover {
+  background: var(--color-secondary-darkest);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(73, 118, 84, 0.5);
+}
+
+.arrow {
+  font-size: 1em;
+  transition: transform 0.3s ease;
+}
+
+.plan-btn:hover .arrow {
+  transform: translateX(4px);
+}
+
+
+/* Dark mode adaptations */
+@media (prefers-color-scheme: dark) {
+  .plan-card {
+    background: var(--color-surface);
+    border-color: var(--color-secondary-dark);
+  }
+
+  .plan-body {
+    background: var(--color-surface);
+  }
+
+  .plan-features li {
+    color: var(--color-text-secondary);
+  }
+
+  .plan-btn {
+    background: transparent;
+    color: var(--color-text-primary);
+    border-color: var(--color-secondary-dark);
+  }
+
+  .plan-btn:hover {
+    background: var(--color-primary);
+  }
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.plan-card {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.plan-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .app-plans-section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .plans-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 400px;
+  }
+
+  .plan-card {
+    margin: 0 10px;
+    min-height: 420px;
+  }
+
+  .plan-header {
+    padding: 35px 25px 40px;
+  }
+
+  .plan-name {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .plan-header {
+    padding: 30px 20px 35px;
+  }
+
+  .plan-body {
+    padding: 20px 25px 25px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .plan-card {
+    min-height: 400px;
+  }
+}
