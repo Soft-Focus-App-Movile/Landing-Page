@@ -1,0 +1,18 @@
+<section class="about-section" id="about">
+  <div class="about-container">
+
+    <!-- Imagen -->
+    <div class="about-image">
+      <img [src]="aboutContent.imageUrl" alt="Panda PsyWell" class="panda-image">
+    </div>
+
+    <!-- Texto -->
+    <div class="about-text">
+      <h2>{{ aboutContent.title }}</h2>
+      <p>{{ aboutContent.description }}</p>
+
+      <p><strong>Misión:</strong> {{ aboutContent.mission }}</p>
+      <p><strong>Visión:</strong> {{ aboutContent.vision }}</p>
+    </div>
+  </div>
+</section>
