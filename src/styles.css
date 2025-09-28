@@ -1,23 +1,23 @@
 :root {
-  --color-primary: #E5EAE3;
+--color-primary: #E5EAE3;
   --color-black: #000000;
   --color-white: #FFFFFF;
 
 
-  --color-secondary-light: #E8EDE6;
+--color-secondary-light: #E8EDE6;
   --color-secondary-medium: #6B9080;
   --color-secondary-dark: #497654;
   --color-secondary-darkest: #122D18;
 
 
-  --color-background: var(--color-white);
+--color-background: var(--color-white);
   --color-surface: var(--color-primary);
   --color-text-primary: var(--color-black);
   --color-text-secondary: var(--color-secondary-darkest);
   --color-text-muted: var(--color-secondary-dark);
 
 
-  --color-button-primary: var(--color-secondary-medium);
+--color-button-primary: var(--color-secondary-medium);
   --color-button-primary-hover: var(--color-secondary-dark);
   --color-link: var(--color-secondary-medium);
   --color-link-hover: var(--color-secondary-dark);
@@ -28,7 +28,7 @@
   :root {
     --color-primary: #2A332D;
     --color-background: #1A1A1A;
-    --color-surface: rgba(42, 42, 42, 0);
+    --color-surface: #2A2A2A;
     --color-text-primary: #F5F5F5;
     --color-text-secondary: #E8EDE6;
     --color-text-muted: #6B9080;
@@ -43,12 +43,12 @@
 
 
 :root {
-  --font-header: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+--font-header: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-titles: 'Crimson Text', Georgia, serif;
   --font-body: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-cards: 'Sorts Mill Goudy', Georgia, serif;
 
-  --font-weight-regular: 400;
+--font-weight-regular: 400;
   --font-weight-semibold: 600;
 }
 
