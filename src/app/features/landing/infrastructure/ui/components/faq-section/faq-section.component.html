@@ -1,0 +1,13 @@
+<section class="faq-section" id="faq">
+  <h2 class="faq-title">PREGUNTAS FRECUENTES</h2>
+
+  <div *ngFor="let faq of faqs; let i = index" class="faq-card">
+    <div class="faq-question" (click)="toggleFAQ(i)">
+      <span>{{ faq.question }}</span>
+      <span class="faq-icon">{{ faq.open ? '-' : '+' }}</span>
+    </div>
+    <div class="faq-answer" *ngIf="faq.open">
+      <p>{{ faq.answer }}</p>
+    </div>
+  </div>
+</section>

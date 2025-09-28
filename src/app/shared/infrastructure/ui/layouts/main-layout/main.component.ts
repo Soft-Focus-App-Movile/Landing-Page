@@ -3,6 +3,7 @@ import {HeroSectionComponent} from '../../../../../features/landing/infrastructu
 import {PlansSectionComponent} from '../../../../../features/landing/infrastructure/ui/components/plans-section/plans-section.component';
 import {AboutSectionComponent} from '../../../../../features/landing/infrastructure/ui/components/about-section/about-section.component';
 import {FeaturesSectionComponent} from '../../../../../features/landing/infrastructure/ui/components/features-section/features-section.component';
+import {FaqSectionComponent} from '../../../../../features/landing/infrastructure/ui/components/faq-section/faq-section.component';
 import {FooterComponent} from '../../components/footer/footer.component';
 import {HeaderComponent} from '../../components/header/header.component';
 
@@ -13,8 +14,9 @@ import {HeaderComponent} from '../../components/header/header.component';
     HeroSectionComponent,
     PlansSectionComponent,
     AboutSectionComponent,
-    FooterComponent,
-    FeaturesSectionComponent
+    FeaturesSectionComponent,
+    FaqSectionComponent,
+    FooterComponent
   ],
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.css']
