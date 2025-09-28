@@ -4,10 +4,20 @@ import {HeroSectionComponent} from '../../../../../features/landing/infrastructu
 import {
   PlansSectionComponent
 } from '../../../../../features/landing/infrastructure/ui/components/plans-section/plans-section.component';
+import {
+  AboutSectionComponent
+} from '../../../../../features/landing/infrastructure/ui/components/about-section/about-section.component';
+import {FooterComponent} from '../../components/footer/footer.component';
 
 @Component({
   selector: 'app-main-layout',
-  imports: [HeaderComponent, HeroSectionComponent, PlansSectionComponent],
+  imports: [
+    HeaderComponent,
+    HeroSectionComponent,
+    PlansSectionComponent,
+    AboutSectionComponent,
+    FooterComponent
+  ],
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.css']
 })

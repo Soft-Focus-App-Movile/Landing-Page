@@ -1,0 +1,43 @@
+<footer class="footer-section">
+  <div class="footer-container">
+    <div class="footer-links">
+      <div class="footer-column">
+        <h4>EXPLORA</h4>
+        <ul>
+          <li *ngFor="let item of footerLinks.explore">
+            <a [href]="item.url">{{ item.label }}</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>RECURSOS</h4>
+        <ul>
+          <li *ngFor="let item of footerLinks.recursos">
+            <a [href]="item.url">{{ item.label }}</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>COMPAÑÍA</h4>
+        <ul>
+          <li *ngFor="let item of footerLinks.compania">
+            <a [href]="item.url">{{ item.label }}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class = "logos">
+    <div class="footer-logo">
+      <img src="assets/images/logoSoftF.png" alt="PsyWell Logo">
+    </div>
+    <div class="footer-socials">
+      <a *ngFor="let social of socialLinks" [href]="social.url" target="_blank" rel="noopener">
+        <img [src]="social.icon" alt="Social link">
+      </a>
+    </div>
+    </div>
+  </div>
+</footer>
