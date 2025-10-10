@@ -28,15 +28,15 @@ export class FeaturesSectionComponent {
       title: 'Seguimiento diario',
       icon: 'assets/images/1fi.svg',
       category: 'user',
-      screenshots: 'assets/images/1fs.svg',
-      description: 'Check-ins emocionales '
+      screenshots: 'assets/images/seguimiento diario 1.svg',
+      description: 'Registra cómo te sientes cada día  '
     },
     {
       id: 'emotional-ai',
       title: 'IA emocional',
       icon: 'assets/images/2fi.svg',
       category: 'user',
-      screenshots: 'assets/images/2fs.svg',
+      screenshots: 'assets/images/IA 1.svg',
       description: 'Apoyo cuando más lo necesitas '
     },
     {
@@ -44,32 +44,32 @@ export class FeaturesSectionComponent {
       title: 'Recursos inmediatos',
       icon: 'assets/images/3fi.svg',
       category: 'user',
-      screenshots: 'assets/images/3fs.svg',
-      description: 'Chat inteligente que te entiende '
+      screenshots: 'assets/images/Biblioteca 1.svg',
+      description: 'Accede a meditaciones, lecturas y herramientas  '
     },
     {
       id: 'professional-dashboard',
       title: 'Dashboard Profesional',
       icon: 'assets/images/4fi.svg',
       category: 'psychologist',
-      screenshots: 'assets/images/4fs.svg',
-      description: 'Monitoreo en tiempo real'
+      screenshots: 'assets/images/paciente 1.svg',
+      description: 'Monitorea el progreso emocional de tus pacientes '
     },
     {
       id: 'direct-chat',
-      title: 'Chat Directo',
+      title: 'Conexión Profesional',
       icon: 'assets/images/5fi.svg',
       category: 'psychologist',
-      screenshots: 'assets/images/5fs.svg',
-      description: ' Alertas inmediatas '
+      screenshots: 'assets/images/Link.svg',
+      description: 'Conecta con tus pacientes mediante un enlace y acompáñalos en su progreso '
     },
     {
       id: 'crisis-button',
-      title: 'Botón de Crisis',
+      title: 'Alertas',
       icon: 'assets/images/6fi.svg',
       category: 'psychologist',
-      screenshots: 'assets/images/6fs.svg',
-      description: 'Comunicación segura'
+      screenshots: 'assets/images/alertas 1.svg',
+      description: 'Detecta cuándo un paciente necesita ayuda urgente y acompáñalo al instante'
     }
   ];
 
