@@ -1,0 +1,40 @@
+<section class="team-section" id="equipo">
+  <div class="team-container">
+
+    <!-- Título de la sección -->
+    <h2 class="team-title">{{ teamContent.title }}</h2>
+
+    <!-- Contenedor de videos -->
+    <div class="videos-container">
+
+      <!-- Video About the Product -->
+      <div class="video-wrapper">
+        <h3 class="video-title">{{ teamContent.videos.product.title }}</h3>
+        <div class="video-frame">
+          <iframe
+            [src]="getEmbedUrl(teamContent.videos.product.url) | sanitizeUrl"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Video About the Team -->
+      <div class="video-wrapper">
+        <h3 class="video-title">{{ teamContent.videos.team.title }}</h3>
+        <div class="video-frame">
+          <iframe
+            [src]="getEmbedUrl(teamContent.videos.team.url) | sanitizeUrl"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

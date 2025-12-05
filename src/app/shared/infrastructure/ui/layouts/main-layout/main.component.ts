@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {HeroSectionComponent} from '../../../../../features/landing/infrastructure/ui/components/hero-section/hero-section.component';
 import {PlansSectionComponent} from '../../../../../features/landing/infrastructure/ui/components/plans-section/plans-section.component';
 import {AboutSectionComponent} from '../../../../../features/landing/infrastructure/ui/components/about-section/about-section.component';
+import {TeamSectionComponent} from '../../../../../features/landing/infrastructure/ui/components/team-section/team-section.component';
 import {FeaturesSectionComponent} from '../../../../../features/landing/infrastructure/ui/components/features-section/features-section.component';
 import {FaqSectionComponent} from '../../../../../features/landing/infrastructure/ui/components/faq-section/faq-section.component';
 import {FooterComponent} from '../../components/footer/footer.component';
@@ -14,6 +15,7 @@ import {HeaderComponent} from '../../components/header/header.component';
     HeroSectionComponent,
     PlansSectionComponent,
     AboutSectionComponent,
+    TeamSectionComponent,
     FeaturesSectionComponent,
     FaqSectionComponent,
     FooterComponent
